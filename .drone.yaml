@@ -17,7 +17,7 @@ steps:
 #      - echo $foo
 
   - name: build recruitunit
-    image: docker:18-dind
+    image: docker:dind
     volumes:
       - name: dockersock
         path: /var/run
