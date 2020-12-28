@@ -17,7 +17,7 @@ steps:
 #      - echo $foo
 
   - name: build recruitunit
-    image: docker:dind
+    image: docker:19-dind
     volumes:
       - name: dockersock
         path: /var/run
@@ -73,7 +73,7 @@ steps:
 
 services:
   - name: docker
-    image: docker:dind
+    image: docker:19-dind
     privileged: true
     volumes:
       - name: dockersock
