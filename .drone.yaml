@@ -25,6 +25,7 @@ steps:
         path: /dist
     commands:
       - sleep 10 # give docker enough time to start
+      - docker --version
       - docker build -t recruitunit:latest .
       - docker run --rm --name recruitunit-build -v $(pwd)/dist:/app/dist recruitunit:latest
 
