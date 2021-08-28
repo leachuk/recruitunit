@@ -61,6 +61,7 @@ steps:
   - name: deploy recruitunit to kubernetes
     image: sinlead/drone-kubectl
     settings:
+      # These secrets are defined via the Drone UI repo settings page
       kubernetes_server:
         from_secret: drone_k8s_server
       kubernetes_cert:
